@@ -1,0 +1,103 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad"
+	],
+	"windowTitle": "websocket test",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "Use this window to test websocket.html example\rModify the value below to update the data in the browser.\r\rWhen you modify the data update will come asap. \rIf you open several browsers or a browser on a phone/another computer, they will update ASAP as well.",
+					"top": 32,
+					"left": 32,
+					"width": 367,
+					"height": 123,
+					"fontWeight": "bold"
+				},
+				"Eingabe": {
+					"type": "input",
+					"left": 128,
+					"top": 173,
+					"width": 151,
+					"height": 17,
+					"dataSource": "Form:C1466.data",
+					"method": "ObjectMethods/Eingabe.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"dataSourceTypeHint": "integer"
+				},
+				"Lineal": {
+					"type": "ruler",
+					"left": 24,
+					"top": 206,
+					"width": 362,
+					"height": 53,
+					"max": 100,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.data",
+					"labelsPlacement": "bottom",
+					"showGraduations": true,
+					"graduationStep": 10,
+					"method": "ObjectMethods/Lineal.4dm"
+				},
+				"Schaltfläche": {
+					"type": "button",
+					"text": "Open html example",
+					"top": 32,
+					"left": 457,
+					"width": 139,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Schaltfläche.4dm"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "In On Load this form starts a Web Socket Server, passing the window reference, which allows to use CALL FORM to modify the values above, as well as the current value.\rEntering a value or moving the ruler will set the value in the web socket class instance.",
+					"top": 264,
+					"left": 24,
+					"width": 375,
+					"height": 108
+				},
+				"Text4": {
+					"type": "text",
+					"text": "The browser opens a Web Socket client connection to 4Ds Web Socket Server.\rThis connection stay open till you close the browser.\rIf you modify data in this form, new value is pushed ot the browser, to immediately update the value.\rTry to move the ruler and see instant updates.\rIf you modify the value in the browser, value is sent through the web socket connection to 4D's Web Socket Server, which uses Call Form to update the data in this form.\r\rTry to open two different browsers (or on different computers) to see updates send to every open connection",
+					"top": 25,
+					"left": 627,
+					"width": 335,
+					"height": 276
+				}
+			}
+		}
+	],
+	"geometryStamp": 44,
+	"method": "method.4dm",
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
